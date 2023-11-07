@@ -16,11 +16,11 @@
 				<div class="col-md-6 col-lg-4 pl-lg-5 mb-4 mb-md-0">
 					<h2 class="footer-heading">Link Menu</h2>
 					<ul class="list-unstyled">
-						<li><a href="#" class="py-2 d-block">Home</a></li>
-						<li><a href="#" class="py-2 d-block">Daftar</a></li>
-						<li><a href="#" class="py-2 d-block">Seleksi</a></li>
-						<li><a href="#" class="py-2 d-block">Info/Pengumuman</a></li>
-						<li><a href="#" class="py-2 d-block">Kontak</a></li>
+						<li><a href="<?= base_url('/'); ?>" class="py-2 d-block">Home</a></li>
+						<li><a href="<?= base_url('/daftar'); ?>" class="py-2 d-block">Daftar</a></li>
+						<li><a href="<?= base_url('/seleksi'); ?>" class="py-2 d-block">Seleksi</a></li>
+						<li><a href="<?= base_url('/info'); ?>" class="py-2 d-block">Info/Pengumuman</a></li>
+						<li><a href="<?= base_url('/kontak'); ?>" class="py-2 d-block">Kontak</a></li>
 					</ul>
 				</div>
 				<div class="col-md-6 col-lg-4 mb-4 mb-md-0">

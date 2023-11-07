@@ -8,11 +8,11 @@
 			</button>
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active"><a href="<?= base_url('/'); ?>" class="nav-link">Home</a></li>
-					<li class="nav-item"><a href="services.html" class="nav-link">Daftar</a></li>
-					<li class="nav-item"><a href="about.html" class="nav-link">Seleksi</a></li>
-					<li class="nav-item"><a href="gallery.html" class="nav-link">Info/Pengumuman</a></li>
-					<li class="nav-item"><a href="contact.html" class="nav-link">Kontak</a></li>
+					<li class="nav-item <?= ($title == "Home PPDB")? "active" : ""; ?>"><a href="<?= base_url('/'); ?>" class="nav-link">Home</a></li>
+					<li class="nav-item <?= ($title == "Halaman Daftar")? "active" : ""; ?>"><a href="<?= base_url('/daftar'); ?>" class="nav-link">Daftar</a></li>
+					<li class="nav-item <?= ($title == "Seleksi Siswa")? "active" : ""; ?>"><a href="<?= base_url('/seleksi'); ?>" class="nav-link">Seleksi</a></li>
+					<li class="nav-item <?= ($title == "Halaman Info")? "active" : ""; ?>"><a href="<?= base_url('/info'); ?>" class="nav-link">Info/Pengumuman</a></li>
+					<li class="nav-item <?= ($title == "Halaman Kontak")? "active" : ""; ?>"><a href="<?= base_url('/kontak'); ?>" class="nav-link">Kontak</a></li>
 				</ul>
 			</div>
 		</div>

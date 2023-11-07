@@ -1,5 +1,4 @@
 <?= $this->include('admin/theme/head'); ?>
-<?= $this->include('admin/sections/shake'); ?>
 <?= $this->include('admin/theme/nav'); ?>
 <?= $this->include('admin/theme/aside'); ?>
 <?= $this->renderSection('pages'); ?>

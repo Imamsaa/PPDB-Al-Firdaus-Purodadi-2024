@@ -6,6 +6,9 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        return view('pages/home');
+        $data = [
+            'title' => 'Home PPDB'
+        ];
+        return view('pages/home',$data);
     }
 }
