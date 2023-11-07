@@ -54,6 +54,53 @@
                         </div>
                     </div>
                     <div class="form-group row">
+                        <h3 for="asalsekolah" class="col-sm-2 col-form-label font-weight-bold">Kecamatan</h3>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="asalsekolah" placeholder="Alamat">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <h3 for="asalsekolah" class="col-sm-2 col-form-label font-weight-bold">Kabupaten</h3>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="asalsekolah" placeholder="Alamat">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <h3 for="asalsekolah" class="col-sm-2 col-form-label font-weight-bold">Provinsi</h3>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="asalsekolah" placeholder="Alamat">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <h3 class="col-sm-2 col-form-label font-weight-bold" for="inlineFormCustomSelect">Agama</h3>
+                        <div class="col-sm-6">
+                            <select class="custom-select form-control" id="inlineFormCustomSelect">
+                                <option selected>Pilih Jenis Kelamin</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <h3 for="asalsekolah" class="col-sm-2 col-form-label font-weight-bold">Riwayat Penyakit</h3>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="asalsekolah" placeholder="Alamat">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <h3 for="asalsekolah" class="col-sm-2 col-form-label font-weight-bold">Berkebutuhan Khusus</h3>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="asalsekolah" placeholder="Alamat">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <h3 for="asalsekolah" class="col-sm-2 col-form-label font-weight-bold">Anak Ke</h3>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="asalsekolah" placeholder="Alamat">
+                        </div>
+                    </div>
+                    <div class="form-group row">
                         <h3 for="asalsekolah" class="col-sm-2 col-form-label font-weight-bold">Prestasi</h3>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="asalsekolah" placeholder="Prestasi">
@@ -94,6 +141,12 @@
                             <div class="col-sm-12">
                                 <input type="date" class="form-control" id="asalsekolah">
                             </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <h3 for="namasiswa" class="col-sm-2 col-form-label font-weight-bold">Alamat</h3>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="namasiswa" placeholder="Nama">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -147,6 +200,12 @@
                             <div class="col-sm-12">
                                 <input type="date" class="form-control" id="asalsekolah">
                             </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <h3 for="namasiswa" class="col-sm-2 col-form-label font-weight-bold">Alamat</h3>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="namasiswa" placeholder="Nama">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -239,6 +298,12 @@
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="asalsekolah" placeholder="Prestasi">
                             <small id="emailHelp" class="form-text text-muted">Nomor Whastapp digunakan untuk mengirim notifikasi pembayaran pendaftaran dan hasil seleksi, harap di isi sesuai dengan format yang sudah ditendtukan</small>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <h3 for="asalsekolah" class="col-sm-2 col-form-label font-weight-bold">Email</h3>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="asalsekolah" placeholder="Prestasi">
                         </div>
                     </div>
                     <div class="form-group row">

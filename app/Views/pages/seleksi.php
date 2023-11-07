@@ -18,7 +18,7 @@
         <div class="heading-section mb-5 mt-5 mt-lg-0">
                 <h2 class="my-4 text-center">SELEKSI PENDAFTARAN</h2>
             </div>
-            <table class="table table-hover">
+            <table class="table table-bordered">
                 <thead>
                     <tr>
                     <th>Nomor</th>
