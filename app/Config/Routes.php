@@ -6,7 +6,10 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
+
 $routes->get('/daftar', 'Daftar::index');
+$routes->post('/daftar/siswa', 'Daftar::daftar');
+
 $routes->get('/seleksi', 'Seleksi::index');
 $routes->get('/info', 'Info::index');
 $routes->get('/kontak', 'Kontak::index');
