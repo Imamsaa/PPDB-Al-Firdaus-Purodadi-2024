@@ -42,3 +42,8 @@ $routes->get('/sekolah/panitia/tambah', 'Admin\Panitia::tambah');
 $routes->get('/sekolah/pesan', 'Admin\Pesan::index');
 
 $routes->get('/sekolah/pembayaran', 'Admin\Pembayaran::index');
+
+$routes->get('/sekolah/whastapp', 'Admin\Whastapp::index');
+
+$routes->get('/sekolah/akun', 'Admin\Akun::index');
+$routes->get('/sekolah/akun/(:segment)', 'Admin\Akun::edit');
