@@ -119,7 +119,7 @@
           </li>
           <li class="nav-header">KEUANGAN</li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="<?= base_url('/sekolah/pembayaran'); ?>" class="nav-link">
               <i class="nav-icon fas fa-money-bill-alt"></i>
               <p>
                 Pembayaran
@@ -127,7 +127,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="<?= base_url('/sekolah/pesan'); ?>" class="nav-link">
               <i class="nav-icon fas fa-comment-alt"></i>
               <p>
                 Pesan

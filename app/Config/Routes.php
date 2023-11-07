@@ -40,3 +40,5 @@ $routes->get('/sekolah/panitia', 'Admin\Panitia::index');
 $routes->get('/sekolah/panitia/tambah', 'Admin\Panitia::tambah');
 
 $routes->get('/sekolah/pesan', 'Admin\Pesan::index');
+
+$routes->get('/sekolah/pembayaran', 'Admin\Pembayaran::index');
