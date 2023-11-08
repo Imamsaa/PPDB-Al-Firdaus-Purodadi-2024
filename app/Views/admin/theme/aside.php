@@ -119,7 +119,7 @@
           </li>
           <li class="nav-header">KEUANGAN</li>
           <li class="nav-item">
-            <a href="<?= base_url('/sekolah/pembayaran'); ?>" class="nav-link">
+            <a href="<?= base_url('/sekolah/pembayaran'); ?>" class="nav-link <?= ($title == 'Pembayaran')?'active':''; ?>">
               <i class="nav-icon fas fa-money-bill-alt"></i>
               <p>
                 Pembayaran

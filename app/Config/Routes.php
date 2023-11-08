@@ -48,6 +48,8 @@ $routes->get('/sekolah/panitia/tambah', 'Admin\Panitia::tambah');
 $routes->get('/sekolah/pesan', 'Admin\Pesan::index');
 
 $routes->get('/sekolah/pembayaran', 'Admin\Pembayaran::index');
+$routes->post('/sekolah/pembayaran/acc', 'Admin\Pembayaran::acc');
+$routes->DELETE('/sekolah/pembayaran/delete/(:segment)', 'Admin\Pembayaran::delete/$1');
 
 $routes->get('/sekolah/whastapp', 'Admin\Whastapp::index');
 

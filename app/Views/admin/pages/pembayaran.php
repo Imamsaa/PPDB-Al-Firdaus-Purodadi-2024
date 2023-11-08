@@ -7,7 +7,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Pembayaran</h1>
+            <h1 class="m-0">Daftar Bukti Pembayaran</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -25,7 +25,7 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">DATA CALON PESERTA DIDIK</h3>
+            <h3 class="card-title">DAFTAR BUKTI PEMBAYARAN</h3>
           </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -35,29 +35,37 @@
                     <th>NO</th>
                     <th>NAMA</th>
                     <th>ASAL SEKOLAH</th>
-                    <th>NO PENDAFTARAN</th>
+                    <th>WHASTAPP</th>
                     <th>ACTION</th>
                   </tr>
                   </thead>
                   <tbody>
+                  <?php $no = 1; foreach($daftar as $d) : ?>
                   <tr>
-                    <td>1</td>
-                    <td>Imam safi'i
-                    </td>
-                    <td>SMPIT Al Firdaus Purwodadi</td>
-                    <td>2121R1543</td>
+                    <td><?= $no; ?></td>
+                    <td><?= $d['nama_siswa']; ?></td>
+                    <td><?= $d['sekolah']; ?></td>
+                    <td><?= $d['nomor_wa']; ?></td>
                     <td>
-                      <button class="mx-1 my-1 btn btn-sm btn-success">EDIT</button>
-                      <a href="" target="_blank" class="mx-1 my-1 btn btn-sm btn-primary">LIHAT</a>
+                      <form action="<?= base_url('sekolah/pembayaran/acc'); ?>" method="post" class="d-inline">
+                        <input type="hidden" name="id" value="<?= $d['id']; ?>">
+                        <button type="submit" class="mx-1 my-1 btn btn-sm btn-success">KONFIRMASI</button>
+                      </form>
+                      <a href="<?= base_url('public/admin/img/bukti/'.$d['bukti']); ?>" target="_blank" class="mx-1 my-1 btn btn-sm btn-primary">LIHAT</a>
+                      <form action="<?= base_url('sekolah/pembayaran/delete/'.$d['id']); ?>" method="post" class="d-inline">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="mx-1 my-1 btn btn-sm btn-danger">HAPUS</button>
+                      </form>
                     </td>
                   </tr>
+                  <?php $no++; endforeach; ?>
                   </tbody>
                   <tfoot>
                   <tr>
                     <th>NO</th>
                     <th>NAMA</th>
                     <th>ASAL SEKOLAH</th>
-                    <th>NO PENDAFTARAN</th>
+                    <th>WHASTAPP</th>
                     <th>ACTION</th>
                   </tr>
                   </tfoot>
