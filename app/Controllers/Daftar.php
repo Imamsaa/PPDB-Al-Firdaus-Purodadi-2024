@@ -48,7 +48,7 @@ class Daftar extends BaseController
                 'message' => $message
             ]);
 
-            return redirect()->to('daftar')->withInput();
+            return redirect()->to(base_url('daftar'))->withInput();
         }
 
         $data = ['title'=> 'Pendaftaran Berhasil'];
@@ -94,7 +94,7 @@ class Daftar extends BaseController
             'pekerjaan_wali'    => $post['pekerjaanwali'], 
             'penghasilan_wali'  => $post['penghasilanwali'],
             'hubungan'          => $post['hubungan'],
-            'nomor_wa'          => $post['nomorwa'],
+            'nomor_wa'          => $post['nomor_wa'],
             'email'             => $post['email'],
             'pembayaran'        => 'pending',
             'status'            => 'proses seleksi'

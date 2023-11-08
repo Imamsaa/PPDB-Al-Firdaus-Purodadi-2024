@@ -303,14 +303,14 @@
                     <div class="form-group row">
                         <h3 for="nomorwa" class="col-sm-2 col-form-label font-weight-bold">Nomor WhastApp</h3>
                         <div class="col-sm-10">
-                            <input type="text" value="<?= old('nomorwa'); ?>" name="nomorwa" class="form-control" id="nomorwa" placeholder="Nomor WhastApp 628......" required>
+                            <input type="text" value="<?= old('nomor_wa'); ?>" name="nomor_wa" class="form-control" id="nomorwa" placeholder="Nomor WhastApp 628......" required>
                             <small id="wa" class="form-text text-muted">Nomor Whastapp digunakan untuk mengirim notifikasi pembayaran pendaftaran dan hasil seleksi, harap di isi sesuai dengan format yang sudah ditentukan yaitu dengan format 62 tanpa tanda (+)</small>
                         </div>
                     </div>
                     <div class="form-group row">
                         <h3 for="email" class="col-sm-2 col-form-label font-weight-bold">Email</h3>
                         <div class="col-sm-10">
-                            <input name="email" value="<?= old('email'); ?>" type="text" class="form-control" id="email" placeholder="Email" required>
+                            <input type="email" name="email" value="<?= old('email'); ?>" type="text" class="form-control" id="email" placeholder="Email" required>
                         </div>
                     </div>
                     <div class="form-group row">
