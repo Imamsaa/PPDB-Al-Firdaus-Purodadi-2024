@@ -20,7 +20,7 @@
                     <div class="form-group row">
                         <h3 for="sekolahasal" class="col-sm-2 col-form-label font-weight-bold">Sekolah Asal</h3>
                         <div class="col-sm-10">
-                            <input type="text" value="<?= old('sekolahasal'); ?>" name="sekolahasal" class="form-control" id="sekolahasal" placeholder="Sekolah Asal" required>
+                            <input type="text" value="<?= old('sekolah'); ?>" name="sekolah" class="form-control" id="sekolahasal" placeholder="Sekolah Asal" required>
                         </div>
                     </div>
                     <div class="form-group row">

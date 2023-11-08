@@ -13,6 +13,9 @@ $routes->post('/daftar/siswa', 'Daftar::daftar');
 $routes->get('/seleksi', 'Seleksi::index');
 $routes->get('/info', 'Info::index');
 $routes->get('/kontak', 'Kontak::index');
+$routes->get('/success', 'Success::index');
+$routes->get('/upload/(:segment)', 'Upload::index/$1');
+$routes->post('/bukti', 'Upload::upload');
 
 $routes->get('/sekolah', 'Admin\Dashboard::index');
 $routes->get('/sekolah/siswa', 'Admin\Siswa::index');

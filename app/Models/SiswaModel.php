@@ -56,7 +56,8 @@ class SiswaModel extends Model
         'nomor_wa',
         'email',
         'pembayaran',
-        'status'
+        'status',
+        'bukti'
     ];
 
 }
