@@ -77,6 +77,18 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a href="<?= base_url(); ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Pendidikan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url(); ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Penghasilan</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="<?= base_url('/sekolah/upload'); ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Keterangan Upload</p>

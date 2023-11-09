@@ -2,18 +2,26 @@
 
 namespace App\Controllers;
 use App\Models\SiswaModel;
+use App\Models\PendidikanModel;
+use App\Models\PenghasilanModel;
 
 class Daftar extends BaseController
 {
     protected $siswaModel;
+    protected $pendidikanModel;
+    protected $penghasilanModel;
 
     public function __construct(){
         $this->siswaModel = new SiswaModel();
+        $this->pendidikanModel = new PendidikanModel();
+        $this->penghasilanModel = new PenghasilanModel();
     }
 
     public function index(): string
     {
         $data = ['title' => 'Halaman Daftar'];
+        $data['pendidikan'] = $this->pendidikanModel->findAll();
+        $data['penghasilan'] = $this->penghasilanModel->findAll();
         return view('pages/daftar', $data);
     }
 

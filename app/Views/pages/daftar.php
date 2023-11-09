@@ -27,8 +27,7 @@
                         <h3 class="col-sm-2 col-form-label font-weight-bold" for="kelamin">Jenis Kelamin</h3>
                         <div class="col-sm-6">
                             <select class="custom-select form-control" name="kelamin" id="kelamin" required>
-                                <option hidden>Pilih</option>
-                                <option value=""></option>
+                                <option></option>
                                 <option value="laki-laki" <?= (old('kelamin') == 'laki-laki')?'selected':''; ?>>Laki-laki</option>
                                 <option value="perempuan" <?= (old('kelamin') == 'perempuan')?'selected':''; ?>>Perempuan</option>
                             </select>
@@ -125,9 +124,10 @@
                         <h3 class="col-sm-2 col-form-label font-weight-bold" for="pendidikanayah">Pendidikan</h3>
                         <div class="col-sm-6">
                             <select class="custom-select form-control" name="pendidikanayah" id="pendidikanayah" required>
-                                <option hidden>Pilih</option>
-                                <option value=""></option>
-                                <option <?= (old('pendidikanayah') == 'Sekolah Dasar')?'selected':''; ?>>Sekolah Dasar</option>
+                                <option></option>
+                                <?php foreach($pendidikan as $p) : ?>
+                                    <option value="<?= $p['nama_pendidikan']; ?>"><?= $p['nama_pendidikan']; ?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                     </div>
@@ -161,9 +161,10 @@
                         <h3 class="col-sm-2 col-form-label font-weight-bold" for="penghasilan">Penghasilan</h3>
                         <div class="col-sm-6">
                             <select class="custom-select form-control" name="penghasilanayah" id="penghasilan" required>
-                                <option hidden>Pilih</option>
-                                <option value=""></option>
-                                <option value="2 Juta" <?= (old('penghasilanayah') == '2 Juta')?'selected':''; ?>>2jt</option>
+                                <option></option>
+                                <?php foreach($penghasilan as $pe) : ?>
+                                    <option value="<?= $pe['nama_penghasilan']; ?>"><?= $pe['nama_penghasilan']; ?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                     </div>
@@ -187,9 +188,10 @@
                         <h3 class="col-sm-2 col-form-label font-weight-bold" for="pendidikanibu">Pendidikan</h3>
                         <div class="col-sm-6">
                             <select class="custom-select form-control" name="pendidikanibu" id="pendidikanibu" required>
-                                <option hidden>Pilih</option>
-                                <option value=""></option>
-                                <option <?= (old('pendidikanibu') == 'Sekolah Dasar')?'selected':''; ?>>Sekolah Dasar</option>
+                                <option></option>
+                                <?php foreach($pendidikan as $p) : ?>
+                                    <option value="<?= $p['nama_pendidikan']; ?>"><?= $p['nama_pendidikan']; ?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                     </div>
@@ -223,9 +225,10 @@
                         <h3 class="col-sm-2 col-form-label font-weight-bold" for="penghasilanibu">Penghasilan</h3>
                         <div class="col-sm-6">
                             <select class="custom-select form-control" name="penghasilanibu" id="penghasilanibu" required>
-                                <option hidden>Pilih</option>
-                                <option value=""></option>
-                                <option value="2 Juta" <?= (old('penghasilanibu') == '2 Juta')?'selected':''; ?>>2 Juta</option>
+                                <option></option>
+                                <?php foreach($penghasilan as $pe) : ?>
+                                    <option value="<?= $pe['nama_penghasilan']; ?>"><?= $pe['nama_penghasilan']; ?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                     </div>
@@ -255,9 +258,10 @@
                         <h3 class="col-sm-2 col-form-label font-weight-bold" for="pendidikanwali">Pendidikan</h3>
                         <div class="col-sm-6">
                             <select class="custom-select form-control" name="pendidikanwali" id="pendidikanwali">
-                                <option hidden>Pilih</option>
-                                <option value=""></option>
-                                <option <?= (old('pendidikanwali') == 'Sekolah dasar')?'selected':''; ?>>Sekolah Dasar</option>
+                                <option></option>
+                                <?php foreach($pendidikan as $p) : ?>
+                                    <option value="<?= $p['nama_pendidikan']; ?>"><?= $p['nama_pendidikan']; ?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                     </div>
@@ -291,9 +295,10 @@
                         <h3 class="col-sm-2 col-form-label font-weight-bold" for="penghasilanwali">Penghasilan</h3>
                         <div class="col-sm-6">
                             <select name="penghasilanwali" class="custom-select form-control" id="penghasilanwali">
-                                <option hidden>Pilih</option>
-                                <option value=""></option>
-                                <option value="2 Juta" <?= (old('penghasilanwali' == '2 Juta'))?'selected':''; ?>>2 Juta</option>
+                                <option></option>
+                                <?php foreach($penghasilan as $pe) : ?>
+                                    <option value="<?= $pe['nama_penghasilan']; ?>"><?= $pe['nama_penghasilan']; ?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                     </div>

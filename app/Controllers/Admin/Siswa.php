@@ -4,13 +4,19 @@ namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 use App\Models\SiswaModel;
+use App\Models\PendidikanModel;
+use App\Models\PenghasilanModel;
 
 class Siswa extends BaseController
 {
     protected $siswaModel;
+    protected $pendidikanModel;
+    protected $penghasilanModel;
 
     public function __construct(){
         $this->siswaModel = new SiswaModel();
+        $this->pendidikanModel = new PendidikanModel();
+        $this->penghasilanModel = new PenghasilanModel();
     }
 
     public function index(): string
@@ -37,6 +43,8 @@ class Siswa extends BaseController
     public function edit(string $no_daftar)
     {
         $data = ['title' => 'Data Calon Peserta Didik'];
+        $data['pendidikan'] = $this->pendidikanModel->findAll();
+        $data['penghasilan'] = $this->penghasilanModel->findAll();
         $data['siswa'] = $this->siswaModel->where('no_daftar',$no_daftar)->first();
         return view('admin/pages/siswa/edit',$data);
     }
