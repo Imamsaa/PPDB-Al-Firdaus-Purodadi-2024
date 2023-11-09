@@ -36,27 +36,27 @@ tr .hilang{
 </table>
   <hr>
   <h2 style="text-align:center;margin:0;"><u>Formulir Pendaftaran</u></h2>
-  <h3 style="text-align:center;margin:0; ">No. Pendaftaran </h3>
+  <h3 style="text-align:center;margin:0; ">No. Pendaftaran <?= $siswa['no_daftar']; ?></h3>
   <table>
   <thead>
     <tr>
       <th colspan="3">Data Diri Pendaftar</th>
     </tr>
-    <tr>
-        <td>NISN</td>
-        <td>rwerwer</td>
-      </tr>
       <tr>
         <td>Nama Lengkap</td>
-        <td>rewrewrw</td>
+        <td><?= $siswa['nama_siswa']; ?></td>
       </tr>
       <tr>
         <td>Tempat, Tanggal lahir</td>
-        <td>rewrwerw</td>
+        <td><?= $siswa['tempat_lahir']; ?>, <?= $siswa['tanggal_lahir']; ?></td>
       </tr>
       <tr>
         <td>Jenis Kelamin</td>
-        <td>ewrwerw</td>
+        <td><?= $siswa['kelamin']; ?></td>
+      </tr>
+      <tr>
+      <td>No Handphone</td>
+        <td><?= $siswa['nomor_wa']; ?></td>
       </tr>
     </thead>
     </table>
@@ -65,39 +65,27 @@ tr .hilang{
     <thead>
       <tr>
         <td>Asal Sekolah</td>
-        <td>sdsdf</td>
+        <td><?= $siswa['sekolah']; ?></td>
         <td>Agama</td>
-        <td>fdsfsdf</td>
+        <td><?= $siswa['agama']; ?></td>
       </tr>
       <tr>
         <td>Alamat Siswa</td>
-        <td>fdsfdsfs</td>
-        <td>No Handphone</td>
-        <td>fdsfdsf</td>
-      </tr>
-      <tr>
-        <td>RT / RW</td>
-        <td>fdsfdsfsdf</td>
+        <td><?= $siswa['alamat']; ?></td>
         <td>E-mail</td>
-        <td>fdsfdsf</td>
+        <td><?= $siswa['email']; ?></td>
       </tr>
       <tr>
         <td>Kecamatan</td>
-        <td>fdsfdsf</td>
+        <td><?= $siswa['kecamatan']; ?></td>
         <td>Anak Ke</td>
-        <td>dfsfdsf</td>
+        <td><?= $siswa['anak_ke']; ?></td>
       </tr>
       <tr>
         <td>Kabupaten</td>
-        <td>fsdfsdf</td>
-        <td>Domisili</td>
-        <td>fdsfsdf</td>
-      </tr>
-      <tr>
+        <td><?= $siswa['kabupaten']; ?></td>
         <td>Provinsi</td>
-        <td>dsfsdfs</td>
-        <td>Hobi</td>
-        <td>dsfsdf</td>
+        <td><?= $siswa['provinsi']; ?></td>
       </tr>
     </thead>
     </table>
@@ -112,32 +100,26 @@ tr .hilang{
       </tr>
       <tr>
         <td>Nama Lengkap</td>
-        <td>dsfsdfdsfd</td>
-        <td>sdfsdfds</td>
+        <td><?= $siswa['nama_ayah']; ?></td>
+        <td><?= $siswa['nama_ibu']; ?></td>
 
       </tr>
       <tr>
         <td>Tempat, Tgl lahir</td>
-        <td>sdfsdfdsf</td>
-        <td>sdfdsf</td>
+        <td><?= $siswa['tempat_lahir_ayah']; ?>, <?= $siswa['tanggal_lahir_ayah']; ?></td>
+        <td><?= $siswa['tempat_lahir_ibu']; ?>, <?= $siswa['tanggal_lahir_ibu']; ?></td>
 
       </tr>
       <tr>
         <td>Pendidikan</td>
-        <td>fdsfsdf</td>
-        <td>dsfdsfds</td>
+        <td><?= $siswa['pendidikan_ayah']; ?></td>
+        <td><?= $siswa['pendidikan_ibu']; ?></td>
 
       </tr>
       <tr>
         <td>Pekerjaan</td>
-        <td>fdsfsdf</td>
-        <td>fdsfsdf</td>
-
-      </tr>
-      <tr>
-        <td>No Hp</td>
-        <td>dsfdsfdsf</td>
-        <td>dsfsdfdsf</td>
+        <td><?= $siswa['pekerjaan_ayah']; ?></td>
+        <td><?= $siswa['pekerjaan_ibu']; ?></td>
 
       </tr>
     </thead>
@@ -146,6 +128,6 @@ tr .hilang{
 </body>
 </html>
 <script>
-    setTimeout(function () { window.print(); }, 500);
-    window.onfocus = function () { setTimeout(function () { window.close(); }, 500); }
+    // setTimeout(function () { window.print(); }, 500);
+    // window.onfocus = function () { setTimeout(function () { window.close(); }, 500); }
 </script>

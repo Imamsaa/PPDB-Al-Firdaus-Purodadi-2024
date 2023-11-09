@@ -19,8 +19,9 @@ $routes->post('/bukti', 'Upload::upload');
 
 $routes->get('/sekolah', 'Admin\Dashboard::index');
 $routes->get('/sekolah/siswa', 'Admin\Siswa::index');
-$routes->get('/sekolah/siswa/(:segment)', 'Admin\Siswa::edit');
-$routes->get('/sekolah/cetaksiswa/(:segment)', 'Admin\Siswa::cetak');
+$routes->post('/sekolah/siswa/edit', 'Admin\Siswa::setEdit');
+$routes->get('/sekolah/siswa/(:segment)', 'Admin\Siswa::edit/$1');
+$routes->get('/sekolah/cetaksiswa/(:segment)', 'Admin\Siswa::cetak/$1');
 
 $routes->get('/sekolah/sekolah', 'Admin\Sekolah::index');
 $routes->get('/sekolah/upload', 'Admin\Upload::setting');

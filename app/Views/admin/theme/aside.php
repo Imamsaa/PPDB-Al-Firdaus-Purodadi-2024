@@ -33,10 +33,10 @@
           </li>
           <li class="nav-header">PANITIA</li>
           <li class="nav-item">
-            <a href="<?= base_url('/sekolah/siswa'); ?>" class="nav-link <?= ($title == 'Data Siswa')?'active':''; ?>">
+            <a href="<?= base_url('/sekolah/siswa'); ?>" class="nav-link <?= ($title == 'Data Calon Peserta Didik')?'active':''; ?>">
               <i class="nav-icon fas fa-graduation-cap"></i>
               <p>
-                Calon Siswa
+              Data Peserta Didik
               </p>
             </a>
           </li>
@@ -116,6 +116,35 @@
                 Pesan
               </p>
             </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-graduation-cap"></i>
+              <p>
+                Seleksi
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?= base_url('/sekolah/sekolah'); ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Daftar Seleksi</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url('/sekolah/upload'); ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Daftar Diterima</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url('/sekolah/program'); ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Daftar Ditolak</p>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-header">KEUANGAN</li>
           <li class="nav-item">
