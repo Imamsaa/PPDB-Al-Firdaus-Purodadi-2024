@@ -19,6 +19,12 @@ $routes->post('/bukti', 'Upload::upload');
 
 $routes->get('/sekolah', 'Admin\Dashboard::index');
 $routes->get('/sekolah/siswa', 'Admin\Siswa::index');
+$routes->post('/sekolah/siswa/terima', 'Admin\Siswa::terima');
+$routes->post('/sekolah/siswa/tolak', 'Admin\Siswa::tolak');
+$routes->post('/sekolah/siswa/batalterima', 'Admin\Siswa::batalTerima');
+$routes->post('/sekolah/siswa/bataltolak', 'Admin\Siswa::batalTolak');
+$routes->get('/sekolah/terima', 'Admin\Siswa::pageTerima');
+$routes->get('/sekolah/tolak', 'Admin\Siswa::pageTolak');
 $routes->post('/sekolah/siswa/edit', 'Admin\Siswa::setEdit');
 $routes->get('/sekolah/siswa/(:segment)', 'Admin\Siswa::edit/$1');
 $routes->get('/sekolah/cetaksiswa/(:segment)', 'Admin\Siswa::cetak/$1');

@@ -20,6 +20,20 @@ class Siswa extends BaseController
         return view('admin/pages/siswa',$data);
     }
 
+    public function pageTerima()
+    {
+        $data = ['title' => 'Data Calon Peserta Didik'];
+        $data['daftar'] = $this->siswaModel->select('id,status,nama_siswa,no_daftar,nomor_wa,sekolah')->where('status','diterima')->findAll();
+        return view('admin/pages/terima',$data);
+    }
+
+    public function pageTolak()
+    {
+        $data = ['title' => 'Data Calon Peserta Didik'];
+        $data['daftar'] = $this->siswaModel->select('id,status,nama_siswa,no_daftar,nomor_wa,sekolah')->where('status','ditolak')->findAll();
+        return view('admin/pages/tolak',$data);
+    }
+
     public function edit(string $no_daftar)
     {
         $data = ['title' => 'Data Calon Peserta Didik'];
@@ -84,5 +98,54 @@ class Siswa extends BaseController
         $data = ['title' => 'Cetak Data Calon Peserta Didik'];
         $data['siswa'] = $this->siswaModel->where('no_daftar',$no_daftar)->first();
         return view('admin/pages/siswa/cetak',$data);
+    }
+
+    // TERIMA PESERTA DIDIK
+
+    public function terima(){
+        $post = $this->request->getPost();
+        if ($this->siswaModel->where('no_daftar',$post['no_daftar'])->set([
+            'status' => 'diterima'
+        ])->update() == true) {
+            return redirect()->to(base_url('sekolah/siswa'));
+        }else{
+            return redirect()->to(base_url('sekolah/siswa'));
+        }
+    }
+
+    // TOLAK PESERTA DIDIK
+    public function tolak(){
+        $post = $this->request->getPost();
+        if ($this->siswaModel->where('no_daftar',$post['no_daftar'])->set([
+            'status' => 'ditolak'
+        ])->update() == true) {
+            return redirect()->to(base_url('sekolah/siswa'));
+        }else{
+            return redirect()->to(base_url('sekolah/siswa'));
+        }
+    }
+
+    // BATAL TERIMA
+    public function batalTerima(){
+        $post = $this->request->getPost();
+        if ($this->siswaModel->where('no_daftar',$post['no_daftar'])->set([
+            'status' => 'proses seleksi'
+        ])->update() == true) {
+            return redirect()->to(base_url('sekolah/siswa'));
+        }else{
+            return redirect()->to(base_url('sekolah/siswa'));
+        }
+    }
+
+    // BATAL TOLAK
+    public function batalTolak(){
+        $post = $this->request->getPost();
+        if ($this->siswaModel->where('no_daftar',$post['no_daftar'])->set([
+            'status' => 'proses seleksi'
+        ])->update() == true) {
+            return redirect()->to(base_url('sekolah/siswa'));
+        }else{
+            return redirect()->to(base_url('sekolah/siswa'));
+        }
     }
 }

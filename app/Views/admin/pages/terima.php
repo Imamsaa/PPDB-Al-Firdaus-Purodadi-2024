@@ -7,12 +7,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Data Calon Peserta Didik</h1>
+            <h1 class="m-0">Data Calon Peserta Didik Diterima</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="<?= base_url('/sekolah'); ?>">Home</a></li>
-              <li class="breadcrumb-item active">Calon Peserta Didik</li>
+              <li class="breadcrumb-item active">Calon Peserta Didik Diterima</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -25,7 +25,7 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">DATA CALON PESERTA DIDIK</h3>
+            <h3 class="card-title">DATA CALON PESERTA DIDIK DITERIMA</h3>
           </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -59,13 +59,9 @@
                     <td>
                       <a href="<?= base_url('sekolah/siswa/'.$d['no_daftar']); ?>" class="mx-1 my-1 btn btn-sm btn-primary">EDIT</a>
                       <a href="<?= base_url('/sekolah/cetaksiswa/'.$d['no_daftar']); ?>" target="_blank" class="mx-1 my-1 btn btn-sm btn-warning">CETAK</a>
-                      <form action="<?= base_url('sekolah/siswa/terima'); ?>" method="POST" class="d-inline">
-                        <input type="hidden" name="no_daftar" value="<?= $d['no_daftar']; ?>">
-                        <button type="submit" class="mx-1 my-1 btn btn-sm btn-success">TERIMA</button>
-                      </form>
-                      <form action="<?= base_url('sekolah/siswa/tolak'); ?>" method="POST" class="d-inline">
-                        <input type="hidden" name="no_daftar" value="<?= $d['no_daftar']; ?>">
-                        <button type="submit" class="mx-1 my-1 btn btn-sm btn-danger">TOLAK</button>
+                      <form action="<?= base_url('sekolah/siswa/batalterima'); ?>" method="POST" class="d-inline">
+                          <input type="hidden" name="no_daftar" value="<?= $d['no_daftar']; ?>">
+                          <button type="submit" class="mx-1 my-1 btn btn-sm btn-danger">BATAL TERIMA</button>
                       </form>
                     </td>
                   </tr>
