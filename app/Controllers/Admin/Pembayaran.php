@@ -5,13 +5,17 @@ namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 
 use App\Models\SiswaModel;
+use App\Models\PesanModel;
+use App\Controllers\Admin\Kirim;
 
 class Pembayaran extends BaseController
 {
     protected $siswaModel;
+    protected $kirim;
 
     public function __construct(){
         $this->siswaModel = new SiswaModel();
+        $this->kirim = new Kirim(new PesanModel(),new SiswaModel());
     }
 
     public function index(): string
@@ -43,7 +47,13 @@ class Pembayaran extends BaseController
             'pembayaran' => 'lunas',
             'no_daftar' => $no_daftar
         ])->update() == true) {
-            return redirect()->to(base_url('sekolah/pembayaran'));
+            $kirimsiswa = $this->siswaModel->where('id',$post['id'])->first();
+            // echo $this->kirim->kirimBayar($kirimsiswa['nomor_wa']);
+            if ($this->kirim->kirimBayar($kirimsiswa['nomor_wa']) == true) {
+                return redirect()->to(base_url('sekolah/pembayaran'));
+            }else{
+                echo $this->kirim->kirimBayar($kirimsiswa['nomor_wa']);
+            }
         }else{
             return redirect()->to(base_url('sekolah/pembayaran'));
         }

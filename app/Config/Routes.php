@@ -53,12 +53,14 @@ $routes->get('/sekolah/panitia', 'Admin\Panitia::index');
 $routes->get('/sekolah/panitia/tambah', 'Admin\Panitia::tambah');
 
 $routes->get('/sekolah/pesan', 'Admin\Pesan::index');
+$routes->post('/sekolah/pesan/edit', 'Admin\Pesan::edit');
 
 $routes->get('/sekolah/pembayaran', 'Admin\Pembayaran::index');
 $routes->post('/sekolah/pembayaran/acc', 'Admin\Pembayaran::acc');
 $routes->DELETE('/sekolah/pembayaran/delete/(:segment)', 'Admin\Pembayaran::delete/$1');
 
 $routes->get('/sekolah/whastapp', 'Admin\Whastapp::index');
+$routes->post('/sekolah/whastapp/edit', 'Admin\Whastapp::edit');
 
 $routes->get('/sekolah/akun', 'Admin\Akun::index');
 $routes->get('/sekolah/akun/(:segment)', 'Admin\Akun::edit');

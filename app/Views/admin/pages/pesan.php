@@ -7,12 +7,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Pesan</h1>
+            <h1 class="m-0">Pengaturan Pesan</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="<?= base_url('/sekolah'); ?>">Home</a></li>
-              <li class="breadcrumb-item active">Pengaturan Sekolah</li>
+              <li class="breadcrumb-item active">Pengaturan Pesan</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -25,48 +25,27 @@
         <div class="container-fluid">
         <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Pengaturan Sekolah</h3>
+                <h3 class="card-title">Pengaturan Pesan</h3>
               </div>
-              <form action="" method="POST">
+              <form action="<?= base_url('sekolah/pesan/edit'); ?>" method="post">
                 <div class="card-body">
                   <div class="form-group">
                       <label for="selector">Selector Pesan</label>
-                      <select id="selector" name="selector" class="form-control">
-                        <option value=""></option>
+                      <select id="selector"class="form-control">
+                        <option>$$</option>
                       </select>
                     </div>
                     <div class="form-group">
-                      <label for="message">Pesan Konfirmasi Mendaftar</label>
-                      <textarea name="message" class="form-control" id="message" rows="10"></textarea>
+                      <label for="pesandaftar">Format Pesan Konfirmasi Mendaftar</label>
+                      <textarea name="pesandaftar" class="form-control" id="pesandaftar" rows="10"><?= (old('pesandaftar'))?old('pesandaftar'):$pesan['pesan_daftar']; ?></textarea>
                     </div>
                     <div class="form-group">
-                      <label for="message">Pesan Konfirmasi Pembayaran</label>
-                      <textarea name="message" class="form-control" id="message" rows="10"></textarea>
+                      <label for="pesanbayar">Format Pesan Konfirmasi Pembayaran</label>
+                      <textarea name="pesanbayar" class="form-control" id="pesanbayar" rows="10"><?= (old('pesanbayar'))?old('pesanbayar'):$pesan['pesan_bayar']; ?></textarea>
                     </div>
-                  <div class="form-group">
-                      <div class="card border-success my-3" style="">
-                        <div class="card-body">
-                          <p class="card-text">
-                            <b>ELEMENT DINAMIS</b><br>
-                            Anda dapat menggunakan <span class="text-danger">TAB</span> dan Elemen dinamis pada pesan,<br>
-                            Elemen dinamis adalah elemen yang akan diganti dengan data siswa ketika pesan dikirim.</p>
-                            <table class="table table-sm table-bordered">
-                                <tr>
-                                  <td>ELEMENT DINAMIS</td>
-                                  <td>DATA DARI DATABASE</td>
-                                </tr>
-                                <tr>
-                                  <td><span class="text-danger font-weight-bold">nis</span></td>
-                                  <td>NIS Siswa</td>
-                                </tr>
-                            </table>
-                        </div>
-                      </div>
-                    </div>
-                </div>
                 <div class="card-footer">
-                <button type="submit" class="btn my-1 mx-1 btn-primary">Submit</button>
-                  <button type="submit" class="btn my-1 mx-1 btn-danger">Cancel</button>
+                  <button type="submit" class="btn my-1 btn-primary">Submit</button>
+                </div>
                 </div>
               </form>
             </div>

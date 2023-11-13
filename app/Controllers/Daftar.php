@@ -4,17 +4,21 @@ namespace App\Controllers;
 use App\Models\SiswaModel;
 use App\Models\PendidikanModel;
 use App\Models\PenghasilanModel;
+use App\Models\PesanModel;
+use App\Controllers\Admin\Kirim;
 
 class Daftar extends BaseController
 {
     protected $siswaModel;
     protected $pendidikanModel;
     protected $penghasilanModel;
+    protected $kirim;
 
     public function __construct(){
         $this->siswaModel = new SiswaModel();
         $this->pendidikanModel = new PendidikanModel();
         $this->penghasilanModel = new PenghasilanModel();
+        $this->kirim = new Kirim(new PesanModel(),new SiswaModel());
     }
 
     public function index(): string
@@ -107,6 +111,7 @@ class Daftar extends BaseController
             'pembayaran'        => 'pending',
             'status'            => 'proses seleksi'
             ]) == true) {
+            $this->kirim->kirimDaftar($post['nomor_wa']);
             return view('pages/success',$data);
         }else{
             redirect()->to('daftar')->withInput();

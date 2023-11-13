@@ -7,12 +7,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Pesan Whastapp</h1>
+            <h1 class="m-0">Pengaturan Whastapp</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="<?= base_url('/sekolah'); ?>">Home</a></li>
-              <li class="breadcrumb-item active">Pengaturan Sekolah</li>
+              <li class="breadcrumb-item active">Pengaturan WhastApp</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -25,48 +25,24 @@
         <div class="container-fluid">
         <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Pengaturan Sekolah</h3>
+                <h3 class="card-title">Pengaturan Whastapp</h3>
               </div>
-              <form action="" method="POST">
+              <form action="<?= base_url('sekolah/whastapp/edit'); ?>" method="POST">
                 <div class="card-body">
-                  <div class="form-group">
-                      <label for="selector">Selector Pesan</label>
-                      <select id="selector" name="selector" class="form-control">
-                        <option value=""></option>
-                      </select>
+                    <div class="form-group">
+                      <label for="endpoint">Endpoint Whastapp</label>
+                      <input type="text" name="endpoint" value="<?= (old('endpoint'))?old('endpoint'):$pesan['endpoint']; ?>" class="form-control" id="nikwali" placeholder="NIK Wali">
                     </div>
                     <div class="form-group">
-                      <label for="message">Pesan Konfirmasi Mendaftar</label>
-                      <textarea name="message" class="form-control" id="message" rows="10"></textarea>
+                      <label for="apikey">API Key</label>
+                      <input type="text" name="apikey" value="<?= (old('apikey'))?old('apikey'):$pesan['apikey']; ?>" class="form-control" id="nikwali" placeholder="NIK Wali">
                     </div>
                     <div class="form-group">
-                      <label for="message">Pesan Konfirmasi Pembayaran</label>
-                      <textarea name="message" class="form-control" id="message" rows="10"></textarea>
+                      <label for="pengirim">Nomor Pengirim</label>
+                      <input type="text" name="pengirim" value="<?= (old('pengirim'))?old('pengirim'):$pesan['pengirim']; ?>" class="form-control" id="nikwali" placeholder="NIK Wali">
                     </div>
-                  <div class="form-group">
-                      <div class="card border-success my-3" style="">
-                        <div class="card-body">
-                          <p class="card-text">
-                            <b>ELEMENT DINAMIS</b><br>
-                            Anda dapat menggunakan <span class="text-danger">TAB</span> dan Elemen dinamis pada pesan,<br>
-                            Elemen dinamis adalah elemen yang akan diganti dengan data siswa ketika pesan dikirim.</p>
-                            <table class="table table-sm table-bordered">
-                                <tr>
-                                  <td>ELEMENT DINAMIS</td>
-                                  <td>DATA DARI DATABASE</td>
-                                </tr>
-                                <tr>
-                                  <td><span class="text-danger font-weight-bold">nis</span></td>
-                                  <td>NIS Siswa</td>
-                                </tr>
-                            </table>
-                        </div>
-                      </div>
-                    </div>
-                </div>
                 <div class="card-footer">
-                <button type="submit" class="btn my-1 mx-1 btn-primary">Submit</button>
-                  <button type="submit" class="btn my-1 mx-1 btn-danger">Cancel</button>
+                  <button type="submit" class="btn my-1 mx-1 btn-primary">Submit</button>
                 </div>
               </form>
             </div>

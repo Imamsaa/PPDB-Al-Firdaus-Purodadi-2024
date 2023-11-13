@@ -25,26 +25,19 @@
                     <th>Nama</th>
                     <th>Nomor Pendaftaran</th>
                     <th>Asal Sekolah</th>
+                    <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <?php $no = 1; foreach($daftar as $d) : ?>
                     <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <th scope="row"><?= $no; ?></th>
+                    <td><?= $d['nama_siswa']; ?></td>
+                    <td><?= $d['no_daftar']; ?></td>
+                    <td><?= $d['sekolah']; ?></td>
+                    <td><?= $d['status']; ?></td>
                     </tr>
-                    <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    </tr>
+                    <?php $no++; endforeach; ?>
                 </tbody>
             </table>
         </div>
